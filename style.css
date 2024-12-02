@@ -1,0 +1,218 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  background-color: #f8f8f8;
+  color: #333;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+}
+
+h1 {
+  color: #2196F3;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+#telaLogin,
+#telaCadastro {
+  width: 350px;
+  margin: 50px auto;
+  padding: 30px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+#telaLogin label,
+#telaCadastro label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+}
+
+#telaLogin input,
+#telaCadastro input,
+#formularioTarefa input,
+#formularioTarefa textarea,
+#formularioTarefa select {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  border: 1px solid #ced4da;
+  border-radius: 5px;
+}
+
+#telaLogin button,
+#telaCadastro button,
+#formularioTarefa button,
+#abrirPopup,
+#conteudo button {
+  background-color: #2196F3;
+  color: #fff;
+  border: none;
+  padding: 12px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#telaLogin button:hover,
+#telaCadastro button:hover,
+#formularioTarefa button:hover,
+#abrirPopup:hover,
+#conteudo button:hover {
+  background-color: #1976D2;
+}
+
+#listaTarefas {
+  list-style: none;
+  padding: 0;
+  width: 600px;
+  margin-bottom: 20px;
+}
+
+#listaTarefas li {
+  background-color: #fff;
+  border-left: 2px solid #2196F3;
+  padding: 15px;
+  margin-bottom: 10px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  border-radius: 8px;
+  transition: transform 0.2s ease;
+}
+
+#listaTarefas li:hover {
+  transform: translateY(-5px);
+}
+
+#listaTarefas li.concluida {
+  background-color: #e0f7fa;
+  border-left-color: #4CAF50;
+}
+
+#listaTarefas .acoes button {
+  margin-left: 10px;
+  background-color: #f44336;
+  color: #fff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+#listaTarefas .acoes button:hover {
+  background-color: #d32f2f;
+}
+
+#listaTarefas .acoes .editar {
+  background-color: #FFC107;
+  color: #fff;
+}
+
+#listaTarefas .acoes .editar:hover {
+  background-color: #FFA000;
+}
+
+.info {
+  font-size: 0.9em;
+  color: #666;
+  margin-top: 5px;
+}
+
+#abrirPopup {
+  display: block;
+  margin: 20px auto;
+  padding: 10px 20px;
+  background-color: #2196F3;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.popup {
+  display: none;
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 80%;
+  max-width: 400px;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 1000; /* Garante que o popup fique acima de outros elementos */
+}
+
+.popup .popup-conteudo {
+  background-color: #fff;
+  padding: 15px;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  position: relative;
+  max-width: 90%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.popup .popup-conteudo .fecharPopup {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+.popup .popup-conteudo h2 {
+  margin-top: 0;
+  margin-bottom: 10px;
+}
+
+#formularioTarefa {
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  font-size: 14px;
+  margin: 0;
+}
+
+#formularioTarefa input,
+#formularioTarefa textarea,
+#formularioTarefa select {
+  max-width: 100%;
+  margin-bottom: 10px;
+}
+
+#formularioTarefa label {
+  margin-bottom: 5px;
+}
+
+#formularioTarefa button {
+  align-self: flex-end;
+}
+
+/* Responsividade */
+@media (max-width: 600px) {
+  .popup .popup-conteudo {
+    font-size: 14px;
+  }
+
+  #formularioTarefa label {
+    margin-bottom: 5px;
+  }
+
+  #formularioTarefa input,
+  #formularioTarefa textarea,
+  #formularioTarefa select {
+    margin-bottom: 10px;
+  }
+}
